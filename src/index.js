@@ -13,5 +13,4 @@ root.render(
     </React.StrictMode>
   </Provider>
 );
-keyboard
 reportWebVitals();

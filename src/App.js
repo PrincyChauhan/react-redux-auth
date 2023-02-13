@@ -7,6 +7,7 @@ import SignUp from "./components/signup";
 import Dashboard from "./components/dashbord";
 import { useDispatch } from "react-redux";
 import { authActions } from "./store/auth";
+import Protected from "./components/protected";
 function App() {
   const dispatch = useDispatch();
   const logoutHandler = () => {
@@ -53,7 +54,7 @@ function App() {
             <Routes>
               <Route path="/sign-in" element={<Login />} />
               <Route path="/sign-up" element={<SignUp />} />
-              <Route path="/dashbord" element={<Dashboard />} />
+              <Route path="/dashbord" element={<Protected><Dashboard /></Protected>} />
             </Routes>
           </div>
         </div>
